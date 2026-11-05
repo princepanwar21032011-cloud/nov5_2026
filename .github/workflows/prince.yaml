@@ -18,4 +18,3 @@ jobs:
         run: docker build -t princepanwar21032011/myimage_nov_5:t${{ github.run_number }} -f Dockerfile .
       - name: mystep5-check the docker image
         run: docker image ls
-
