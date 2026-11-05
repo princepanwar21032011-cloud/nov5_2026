@@ -1,0 +1,16 @@
+name: myworkflow1
+on:
+  push:
+jobs:
+  myjob1:
+    runs-on: [self-hosted, myrunner1, linux, x64]
+    steps:
+      - name: mystep1
+        run: |
+          cat /etc/os-release
+          ls -al
+
+      - name: mystep2-checkout the source code
+        uses: actions/checkout@v4
+      - name: mystep3-check the source code
+        run: ls -al
